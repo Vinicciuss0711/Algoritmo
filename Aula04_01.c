@@ -3,32 +3,30 @@
 /*
 Vinícius Carneiro Carvalho
 Aula de Algoritmo e Programação Estruturada
-18/08/2025
-Soma
+21/08/2025
+Média
 */
 
-int main (){
-int C; 
-int A;
-int B;
-int soma;
+float main (){
+float A,B,C;
+float resultado;
 
 //Definição das variáveis
 
     printf("Digite o valor A:\n");
-    scanf("%d",&A);
+    scanf("%f",&A);
 
     printf("Digite o valor B:\n");
-    scanf("%d",&B);
+    scanf("%f",&B);
 
     printf("Digite o valor C:\n");
-    scanf("%d",&C);
+    scanf("%f",&C);
 
-soma = A + B + C;
+resultado = (A + B + C)/3;
 //Saída do valor
 
-    printf("A soma e %d\n", soma);
-printf ("A posicao de memoria da soma e %d\n", &soma);
+    printf("O resultado da media e %f\n", resultado);
+printf ("A posicao de memoria do resultado e %f\n", &resultado);
 
     return 0;
 }
