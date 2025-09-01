@@ -1,0 +1,10 @@
+{
+    "launch": {
+
+    "editor.acceptSuggestionOnEnter": "off",
+    "editor.acceptSuggestionOnCommitCharacter": false
+},
+"github.copilot.enable": {
+    "*": false
+}
+}

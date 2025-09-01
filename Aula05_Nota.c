@@ -19,7 +19,7 @@ if(A>=9 && B<20){
     printf("Voce esta aprovado!");
 } else if(A>=7 && B<=15){
     printf("Voce esta aprovado!");
-} else if(A>=5 && A<7 || B<15){
+} else if(A>=5 && A<7 && B<15){
     printf("Voce esta de recuperacao!");
 } else{
     printf("Voce esta de reprovado!");
