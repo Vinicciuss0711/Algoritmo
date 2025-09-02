@@ -16,14 +16,16 @@ int main(){
     scanf("%f",&N);
 
     /* 
-    O total serve como temporizador, ele 
+    O total serve como contador, ele 
     conta 1 a cada vez que o "while" é 
     reiniciado.
     */
 
     while(N>0){
         soma = soma + N;
-        total = total + 1;
+        total++; 
+        
+        //"total++" é a mesma coisa que "total = total + 1"
         
         printf("\nDigite outro numero: ");
         scanf("%f",&N);
