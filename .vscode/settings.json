@@ -6,5 +6,8 @@
 },
 "github.copilot.enable": {
     "*": false
+},
+"files.associations": {
+    "aula12-02_vetores_notas": "c"
 }
 }
