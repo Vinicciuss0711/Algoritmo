@@ -1,0 +1,121 @@
+/*
+Vinícius Carneiro Carvalho
+Aula de Algoritmo e Programação Estruturada
+29/09/2025
+Temperatura média do mês de cada ano
+*/
+
+#include <stdio.h>
+#define TAM 12
+
+int main(){
+    float temperatura[TAM], soma=0, media;
+
+    printf("Digite a temperatura de cada mes do ano: ");
+    
+    //entrada
+    for (int i = 0; i < TAM; i++){
+        
+        scanf("%f", &temperatura[i]);
+
+        soma+=temperatura[i];
+    }
+ 
+    media = soma/TAM;
+    
+    //saída
+    printf("\nA temperatura media do ano e: %0.1f", media);
+
+    //meses
+    for (int i = 0; i < TAM; i++){
+        if(i==0){
+            printf("\nJaneiro - %0.1f", temperatura[i]);
+            
+            if(temperatura[i]>media){
+                printf(" - ACIMA DA MEDIA ");
+            }
+        }
+        if(i==1){
+            printf("\nFevereiro - %0.1f", temperatura[i]);
+            
+            if(temperatura[i]>media){
+                printf(" - ACIMA DA MEDIA ");
+            }
+        }
+        if(i==2){
+            printf("\nMarco - %0.1f", temperatura[i]);
+            
+            if(temperatura[i]>media){
+                printf(" - ACIMA DA MEDIA ");
+            }
+        }
+        if(i==3){
+            printf("\nAbril - %0.1f", temperatura[i]);
+            
+            if(temperatura[i]>media){
+                printf(" - ACIMA DA MEDIA ");
+            }
+        }
+        if(i==4){
+            printf("\nMaio - %0.1f", temperatura[i]);
+            
+            if(temperatura[i]>media){
+                printf(" - ACIMA DA MEDIA ");
+            }
+        }
+        if(i==5){
+            printf("\nJunho - %0.1f", temperatura[i]);
+            
+            if(temperatura[i]>media){
+                printf(" - ACIMA DA MEDIA ");
+            }
+        }
+        if(i==6){
+            printf("\nJulho - %0.1f", temperatura[i]);
+            
+            if(temperatura[i]>media){
+                printf(" - ACIMA DA MEDIA ");
+            }
+        }
+        if(i==7){
+            printf("\nAgosto - %0.1f", temperatura[i]);
+            
+            if(temperatura[i]>media){
+                printf(" - ACIMA DA MEDIA ");
+            }
+        }
+        if(i==8){
+            printf("\nSetembro - %0.1f", temperatura[i]);
+            
+            if(temperatura[i]>media){
+                printf(" - ACIMA DA MEDIA ");
+            }
+        }
+        if(i==9){
+            printf("\nOutubro - %0.1f", temperatura[i]);
+            
+            if(temperatura[i]>media){
+                printf(" - ACIMA DA MEDIA ");
+            }
+        }
+        if(i==10){
+            printf("\nNovembro - %0.1f", temperatura[i]);
+            
+            if(temperatura[i]>media){
+                printf(" - ACIMA DA MEDIA ");
+            }
+        }
+        if(i==11){
+            printf("\nDezembro - %0.1f", temperatura[i]);
+            
+            if(temperatura[i]>media){
+                printf(" - ACIMA DA MEDIA ");
+            }
+        }
+    }
+    
+
+
+
+    return 0;
+}
