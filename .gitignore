@@ -1,26 +1,55 @@
-# Compilados de C
+# Prerequisites
+*.d
+
+# Object files
 *.o
-*.out
+*.ko
+*.obj
+*.elf
+
+# Linker output
+*.ilk
+*.map
+*.exp
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Libraries
+*.lib
 *.a
+*.la
+*.lo
+
+# Shared objects (inc. Windows DLLs)
+*.dll
 *.so
+*.so.*
+*.dylib
+
+# Executables
 *.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
 
-# Diretórios comuns de build
-/build/
-bin/
-obj/
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
 
-# Arquivos temporários
-*.log
-*.tmp
-*.swp
+# Kernel Module Compile Results
+*.mod*
+*.cmd
+.tmp_versions/
+modules.order
+Module.symvers
+Mkfile.old
+dkms.conf
 
-# Arquivos de IDEs
-.vscode/
-*.code-workspace
-.idea/
-*.iml
-
-# Arquivos do sistema
-.DS_Store
-Thumbs.db
+# debug information files
+*.dwo
