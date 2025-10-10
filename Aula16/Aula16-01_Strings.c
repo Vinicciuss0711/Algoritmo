@@ -2,7 +2,7 @@
 Vinícius Carneiro Carvalho
 Aula de Algoritmo e Programação Estruturada
 02/10/2025
-Nome
+Strings
 */
 
 #include <stdio.h>
