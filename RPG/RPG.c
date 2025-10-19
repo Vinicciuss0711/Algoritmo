@@ -4,6 +4,7 @@
 
 struct RPG{
     char cosplay[100];
+    int aura;
     int paixao;
 };
 
@@ -17,10 +18,8 @@ void intro(void){
     printf(" /_/   /_/ |___/\\___/  /_____/\\__,_/\\__, /____/     |__/|__/_/\\__/_/ /_/   \\____/\\____/_/_/\\___/      \n");
     printf("                                    /____/                                                           \n");
     printf(" ____________________________________________________________________________________________        \n");
-    printf("\n");
-    printf(" PRECIONE ENTER PARA CONTINUAR \n");
+    printf(" \nPRESSIONE ENTER PARA CONTINUAR \n");
     
-    return;
 }
 
 void prologo1(void){
@@ -30,12 +29,13 @@ void prologo1(void){
     printf(" / ____/ /  / /_/ / / /_/ / /_/ / /_/ /\n");
     printf("/_/   /_/   \\____/_/\\____/\\__, /\\____/ \n");
     printf("                         /____/        \n");
-    printf("\nO ar vibra com o som dos alto-falantes, o brilho das luzes e o burburrinho de milhares de fas animados.\n");
-    printf("E mais um dia na BGS, o maior evento de games da America Latina.\n");
+    printf("\nO ar vibra com o som dos alto-falantes, o brilho das luzes e o burburrinho de milhares \n");
+    printf("de fas animados. E mais um dia na BGS, o maior evento de games da America Latina.\n");
     printf("Entre filas interminaveis, stands coloridos e cosplayers de todos os tipos,\n");
     printf("voce se prepara para viver cinco dias inesqueciveis.\n");
     printf("Sua maquiagem esta impecavel, o figurino pronto, afinal o cosplay que voce escolheu\n");
-    printf(" PRECIONE ENTER PARA CONTINUAR... \n");
+    printf(" \nPRESSIONE ENTER PARA CONTINUAR... \n");
+
 }
 void prologo2(void){
     printf("e sua maior arma e sua identidade durante essa aventura.\n");
@@ -49,8 +49,8 @@ void prologo2(void){
     printf("Agora, o desafio e seu: resistir as investidas de Colle, suas cantadas infaliveis\n");
     printf("e seu olhar hipnotizante.\n");
     printf("A cada resposta errada, ele ganha mais 'aura', e quanto mais aura tiver,\n");
-    printf(" PRECIONE ENTER PARA CONTINUAR... \n");
-
+    printf(" \nPRESSIONE ENTER PARA CONTINUAR... \n");
+    
 }
 void prologo3(void){
     printf("mais dificil sera escapar de seu encanto.\n");
@@ -60,42 +60,106 @@ void prologo3(void){
     printf("Duas cantadas por dia.\n");
     printf("Quatro respostas por rodada.\n");
     printf("Um so objetivo: NAO SE APAIXONAR.\n");
-    printf("\nPRECIONE ENTER PARA O JOGO COMECAR...\n");
+    printf(" \nPRESSIONE ENTER PARA CONTINUAR... \n");
+    
 }
+
+void dia1(void){
+    printf("    ____  _          ___\n");
+    printf("   / __ \\(_)___ _   <  /\n");
+    printf("  / / / / / __ `/   / / \n");
+    printf(" / /_/ / / /_/ /   / /  \n");
+    printf("/_____/_/\\__,_/   /_/   \n");
+    printf("\nPRESSIONE ENTER PARA O DIA 1 COMECAR!\n");
+    
+}
+
+void dia1_dialogo1(void){
+    printf("Voce e uma bela dama curtindo a BGS, ate que...\n");
+    printf("\n*Um MACHO PELUDO SELVAGEM apareceu!!\n");
+    printf("Ele te oferece um suquinho de laranja \n");
+    printf("\nMacho peludo selvagem: TA AFIM DE RELAXAR?\n");
+    printf("1. \n");
+    printf("AI QUE DELICIA CARA (TOMA TUDO NUMA TALAGADA SO)\n");
+    printf("2. \n");
+    printf("COMO ASSIM, NAO ENTENDI (TOMA O SUCO DEVAGARINHO)\n");
+    printf("3. \n");
+    printf("Nao... \n");
+    printf("4. \n");
+    printf("Ignora.\n");
+    printf("\nDigite um numero para responder Colle! \n");
+}
+
 
 int main(){
     char enter;
+    int resposta = 0;
+    struct RPG jogador;
+    struct RPG Colle;
     
     intro(); //usa a função para aperecer a tela inicial com ascii
     
-    while(enter!='\n'){ //while para só continuar o código caso o enter seja pressionado
-        scanf("%c",&enter);
-    }
+    //while para só continuar o código caso o enter seja pressionado
+    scanf("%c",&enter);
+    
     enter = '\0';
     system("cls"); // "system("cls");" serve para limpar a tela
     
     prologo1();
-
-    while(enter!='\n'){ 
-        scanf("%c",&enter);
-    }
+    
+    
+    scanf("%c",&enter);
+    
     enter = '\0';
     system("cls"); 
     
     prologo2();
     
-    while(enter!='\n'){ 
-        scanf("%c",&enter);
-    }
+    scanf("%c",&enter);
     enter = '\0';
     system("cls"); 
-
+    
     prologo3();
     
-    while(enter!='\n'){ 
-        scanf("%c",&enter);
-    }
+    scanf("%c",&enter);
     enter = '\0';
     system("cls"); 
+    
+    dia1();
 
+    scanf("%c",&enter);
+    enter = '\0';
+    system("cls"); 
+    
+    do{
+
+        dia1_dialogo1();
+        scanf("%d", &resposta); 
+        system("cls");
+        
+        if(resposta==1){
+            jogador.aura = 100; 
+            printf("Voce possui 100 de aura nessa rodada!");
+        }else if(resposta==2){
+            jogador.aura = 50;        
+            printf("Voce possui 50 de aura nessa rodada!");
+        }else if(resposta==3){
+            Colle.aura = 100;        
+            printf("Colle possui 100 de aura nessa rodada!");
+        }else if(resposta==4){
+            Colle.aura = 50;        
+            printf("Colle possui 50 de aura nessa rodada!");
+        }else{
+            printf("Resposta invalida! ");
+        }
+    
+    
+    printf(" \nPRESSIONE ENTER PARA CONTINUAR... \n");
+    scanf("%c",&enter);
+    enter = '\0';
+    system("cls");
+    }while (resposta<1 || resposta>4);
+    
+    
+    return 0;
 }
