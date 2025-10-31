@@ -19,7 +19,7 @@ int main(void){
     setlocale(LC_ALL, "pt_BR.UTF-8");
 
     int numero;
-    printf("Digite um número para calcular o Fibonacci");
+    printf("Digite um número para calcular o Fibonacci\n");
     scanf("%d",&numero);
     printf("Fibonacci é %d\n", fib(numero));
     return 0;
