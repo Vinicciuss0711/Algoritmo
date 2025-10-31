@@ -1,5 +1,5 @@
 /*
-Vinícius Carneiro Carvalho
+Vinícius Carneiro Caralho
 Aula de Algoritmo e Programação Estruturada
 30/10/2025
 Fatorial Sem e Com Recursão
