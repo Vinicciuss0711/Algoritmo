@@ -10,8 +10,7 @@ Ponteiros
 int main() {
     int x = 10;
     int y = 20;
-    int *p;
-    int *p2;
+    int *p, *p2;
 
     p=&x;
     p2=&y;
