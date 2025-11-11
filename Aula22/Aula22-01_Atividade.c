@@ -1,7 +1,7 @@
 /*
 Vinícius Carneiro Carvalho
 Aula de Algoritmo e Programação Estruturada
-06/11/2025
+10/11/2025
 Cadastro de Pessoas em C
 */
 
