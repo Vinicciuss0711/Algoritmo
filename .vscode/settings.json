@@ -8,6 +8,7 @@
     "*": false
 },
 "files.associations": {
-    "aula12-02_vetores_notas": "c"
+    "aula12-02_vetores_notas": "c",
+    "string.h": "c"
 }
 }
