@@ -82,7 +82,7 @@ void listar(){
 }
 
 void salvar(){
-    FILE *arq = fopen("pessoas.dat", "ab"); //fopen abre o arquivo para que assim seja possivel mexer nele
+    FILE *arq = fopen("pessoas.bin", "ab"); //fopen abre o arquivo para que assim seja possivel mexer nele
     
     fwrite(&pessoas[N_PESSOAS - 1], sizeof(Pessoa), 1, arq); //fwrite serve para escrever algo no arquivo
     
@@ -91,7 +91,7 @@ void salvar(){
 }
 
 int ler_arq1(){
-    FILE *arq = fopen("pessoas.dat", "rb"); 
+    FILE *arq = fopen("pessoas.bin", "rb"); 
     
     if(arq==NULL){
         printf("\nErro ao encontrar o arquivo!\n");
@@ -109,7 +109,7 @@ int ler_arq1(){
 }
 
 int ler_arq2(){
-    FILE *arq = fopen("pessoas.dat", "rb"); 
+    FILE *arq = fopen("pessoas.bin", "rb"); 
     
     if(arq==NULL){
         printf("\nNenhum arquivo existente, criando um novo arquivo chamado 'pessoas.dat'\n");
